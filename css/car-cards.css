@@ -1,6 +1,7 @@
 *  {
     box-sizing: border-box;
 }
+
 :root {
     --spacer: .25rem;
 
@@ -8,14 +9,17 @@
     --spacer-l: calc(3 * var(--spacer));
     --spacer-xl: calc(4 * var(--spacer));
 }
+
 p, h1, h2, h3, h4, h5, h6, body {
     padding: 0;
     margin: 0;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #535353;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -24,21 +28,26 @@ header {
     padding: var(--spacer-xl);
     background: linear-gradient(lightgray, transparent);
 }
+
 header a:first-of-type {
     margin-inline-start: auto;
 }
+
 header a:not(first-of-type) {
     margin-inline-start: 3vw;
 }
+
 header a {
     text-decoration: none;
     color: unset;
 }
+
 main {
     padding: var(--spacer-xl);
     column-count: 4;
     column-width: 220px;
 }
+
 .card {
     display: grid;
     position: relative;
@@ -48,19 +57,23 @@ main {
     border: 1px solid lightgray;
     border-radius: var(--spacer-xl);
     padding: var(--spacer-xl);
-    margin-block-end: 1em;
+    margin-block-end: var(--spacer-xl);
 
     color: #aaa;
 }
-.card h2 {
+
+.card hgroup h2 {
     margin-block-end: var(--spacer-m);
 }
-.card h3 {
+
+.card hgroup p {
     margin-block-end: calc(var(--spacer-xl) + var(--spacer-m));
     font-size: .9em;
+    font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
+
 .card img {
     position: absolute;
     top: 1em;
@@ -68,17 +81,20 @@ main {
     width: 40%;
     z-index: -1;
 }
-.card p {
+
+.card > p {
     margin-block-end: var(--spacer-xl);
     font-size: .9em;
     line-height: 1.3;
     letter-spacing: 1px;
 }
+
 .card .cta {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .cta button {
     padding: .5em;
     border: 1px solid lightgrey;
@@ -86,6 +102,7 @@ main {
     font-size: .75em;
     letter-spacing: 1px;
 }
+
 .cta .price {
     font-size: .9em;
     letter-spacing: 1px;
